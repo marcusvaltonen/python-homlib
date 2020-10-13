@@ -1,11 +1,44 @@
-language: python
-sudo: false
+language: cpp
 
-python:
-  - "3.8"
+dist: bionic
+
+matrix:
+  include:
+  - os: linux
+    env: PYTHON=3.6
+    addons:
+      apt:
+        update: true
+        packages:
+          - libeigen3-dev python3-pip python3.6-dev
+  - os: linux
+    env: PYTHON=3.7
+    addons:
+      apt:
+        update: true
+        packages:
+          - libeigen3-dev python3-pip python3.7-dev
+  - os: linux
+    env: PYTHON=3.8
+    addons:
+      apt:
+        update: true
+        packages:
+          - libeigen3-dev python3-pip python3.8-dev
+
+before_install:
+- |
+  pip3 install --user --upgrade pip virtualenv
+  virtualenv -p python$PYTHON venv
+  source venv/bin/activate
 
 install:
-  - pip install tox
+- |
+  python setup.py sdist
+  pip install --verbose dist/*.tar.gz
+  pip install pytest pytest-approvaltests pytest-flake8
 
 script:
-  - tox -v -e py
+- |
+  pytest -s --ignore=lib
+  pytest -s --ignore=lib --flake8
