@@ -3,6 +3,8 @@ dist: bionic
 matrix:
   include:
   - os: linux
+    env: PYTHON=3.6
+  - os: linux
     env: PYTHON=3.7
   - os: linux
     env: PYTHON=3.8
@@ -17,6 +19,8 @@ install:
 - |
   python setup.py sdist
   pip install --verbose dist/*.tar.gz
-  pip install tox
+  pip install pytest pytest-approvaltests pytest-flake8
 script:
-  - tox -v -e py
+- |
+  pytest -s --ignore=lib
+  pytest -s --ignore=lib --flake8
