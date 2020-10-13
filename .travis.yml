@@ -10,7 +10,7 @@ before_install:
 - |
   export CXX=g++-5.4 CC=gcc-5.4
   sudo apt-get install libeigen3-dev
-  pip install --user --upgrade pip virtualenv
+  pip3 install --user --upgrade pip virtualenv
   virtualenv -p python$PYTHON venv
   source venv/bin/activate
 install:
