@@ -1,0 +1,13 @@
+include *.in
+include *.txt
+include LICENSE
+include tox.ini
+recursive-include lib *.cpp
+recursive-include lib *.hpp
+recursive-include lib *.txt
+recursive-include lib *.cmake
+recursive-include src *.cpp
+recursive-include src *.py
+recursive-include tests *.json
+recursive-include tests *.py
+recursive-include tests *.txt

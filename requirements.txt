@@ -1,0 +1,4 @@
+approvaltests==0.2.7
+numpy==1.19.2
+pytest==6.1.1
+pytest-approvaltests==0.1.0
