@@ -1,14 +1,21 @@
-language: python
-sudo: false
-
-python:
-  - "3.8"
-
+language: cpp
+dist: xenial
+matrix:
+  include:
+  - os: linux
+    env: PYTHON=3.7
+  - os: linux
+    env: PYTHON=3.8
 before_install:
-  - sudo apt-get install libeigen3-dev
-
+- |
+  export CXX=g++-5.4 CC=gcc-5.4
+  sudo apt-get install libeigen3-dev
+  pip install --user --upgrade pip virtualenv
+  virtualenv -p python$PYTHON venv
+  source venv/bin/activate
 install:
-  - pip install tox
-
+- |
+  pip install -e -v .
+  pip install tox
 script:
   - tox -v -e py
