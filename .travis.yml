@@ -6,16 +6,25 @@ matrix:
   include:
   - os: linux
     env: PYTHON=3.6
+    addons:
+      apt:
+        update: true
+        packages:
+          - libeigen3-dev python3-pip python3.6-dev
   - os: linux
     env: PYTHON=3.7
+    addons:
+      apt:
+        update: true
+        packages:
+          - libeigen3-dev python3-pip python3.7-dev
   - os: linux
     env: PYTHON=3.8
-
-addons:
-  apt:
-    update: true
-    packages:
-      - libeigen3-dev python3-pip python$PYTHON python$PYTHON-dev
+    addons:
+      apt:
+        update: true
+        packages:
+          - libeigen3-dev python3-pip python3.8-dev
 
 before_install:
 - |
