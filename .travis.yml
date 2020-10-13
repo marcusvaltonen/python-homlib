@@ -22,11 +22,13 @@ before_install:
   pip3 install --user --upgrade pip virtualenv
   virtualenv -p python$PYTHON venv
   source venv/bin/activate
+
 install:
 - |
   python setup.py sdist
   pip install --verbose dist/*.tar.gz
   pip install pytest pytest-approvaltests pytest-flake8
+
 script:
 - |
   pytest -s --ignore=lib
