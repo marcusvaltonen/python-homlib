@@ -8,14 +8,15 @@ matrix:
     env: PYTHON=3.8
 before_install:
 - |
-  export CXX=g++-7.5 CC=gcc-7.5
+  export CXX=g++-7.5.0 CC=gcc-7.5.0
   sudo apt-get install -y libeigen3-dev python3-pip python$PYTHON python$PYTHON-dev
   pip3 install --user --upgrade pip virtualenv
   virtualenv -p python$PYTHON venv
   source venv/bin/activate
 install:
 - |
-  pip install -e . -v
+  python setup.py sdist
+  pip install --verbose dist/*.tar.gz
   pip install tox
 script:
   - tox -v -e py
