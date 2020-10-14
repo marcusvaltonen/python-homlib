@@ -4,9 +4,10 @@
 ![PyPI](https://img.shields.io/pypi/v/homlib)
 ![GitHub](https://img.shields.io/github/license/marcusvaltonen/python-homlib)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/marcusvaltonen/python-homlib.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/marcusvaltonen/python-homlib/context:python)
+[![codecov](https://codecov.io/gh/marcusvaltonen/python-homlib/branch/main/graph/badge.svg)](https://codecov.io/gh/marcusvaltonen/python-homlib)
 
 Python homography library. Classic and state-of-the-art methods for homography estimation.
-Wrapps the C++/Eigen library [HomLib](https://github.com/marcusvaltonen/HomLib)
+Wrapps the C++/Eigen library [HomLib](https://github.com/marcusvaltonen/HomLib).
 
 ## Solvers available
 List will be updated.
