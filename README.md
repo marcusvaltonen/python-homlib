@@ -5,23 +5,17 @@
 ![GitHub](https://img.shields.io/github/license/marcusvaltonen/python-homlib)
 
 Python homography library. Classic and state-of-the-art methods for homography estimation.
-
-Wrapps the C++/Eigen library HomLib.
+Wrapps the C++/Eigen library [HomLib](https://github.com/marcusvaltonen/HomLib)
 
 ## Solvers available
 List will be updated.
 
+## Installation
+A pre-alpha release is available at PyPi, and can be installed using
+```bash
+    $ pip install homlib
+```
+You may also compile the source code, see "Development".
+
 ## Development
-The Python wrapper uses eigency, which can be downloaded using pip. The requirements.txt
-file in the `python` subdirectory also installs the necessary dependencies (numpy and cython)
-```bash
-    $ pip install -r requirements.txt
-```
-In order to compile and wrap the C++ code
-```bash
-    $ python setup.py bdist_wheel
-```
-To install the local changes use
-```bash
-    $ pip install -e .[dev]
-```
+More info soon.
