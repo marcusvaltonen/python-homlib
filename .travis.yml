@@ -33,6 +33,7 @@ matrix:
         update: true
         packages:
           - python3
+          - eigen
 
 before_install:
 - |
