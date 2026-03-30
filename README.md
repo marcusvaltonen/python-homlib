@@ -1,5 +1,7 @@
 # homlib
 
+This repository has been deprecated since the python support is merged with the main repo: [HomLib](https://github.com/marcusvaltonen/HomLib).
+
 [![Build Status](https://travis-ci.com/marcusvaltonen/python-homlib.svg?branch=main)](https://travis-ci.com/marcusvaltonen/python-homlib)
 ![PyPI](https://img.shields.io/pypi/v/homlib)
 ![GitHub](https://img.shields.io/github/license/marcusvaltonen/python-homlib)
